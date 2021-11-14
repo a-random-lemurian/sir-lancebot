@@ -332,11 +332,11 @@ class Reddit:
 
 
 # Default role combinations
-MODERATION_ROLES = Roles.moderation_team, Roles.admins, Roles.owners
-STAFF_ROLES = Roles.helpers, Roles.moderation_team, Roles.admins, Roles.owners
+MODERATION_ROLES = {Roles.moderation_team, Roles.admins, Roles.owners}
+STAFF_ROLES = {Roles.helpers, Roles.moderation_team, Roles.admins, Roles.owners}
 
 # Whitelisted channels
-WHITELISTED_CHANNELS = (
+WHITELISTED_CHANNELS = {
     Channels.bot,
     Channels.community_bot_commands,
     Channels.off_topic_0,
@@ -344,7 +344,7 @@ WHITELISTED_CHANNELS = (
     Channels.off_topic_2,
     Channels.voice_chat_0,
     Channels.voice_chat_1,
-)
+}
 
 GIT_SHA = environ.get("GIT_SHA", "foobar")
 
