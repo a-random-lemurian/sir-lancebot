@@ -79,7 +79,7 @@ def _set_trace_loggers() -> None:
     When the env var is a list of logger names delimited by a comma,
     each of the listed loggers will be set to the trace level.
 
-    If this list is prefixed with a "!", all of the loggers except the listed ones will be set to the trace level.
+    If the list has a "!" prefix, all loggers except those listed will be set to the trace level.
 
     Otherwise if the env var begins with a "*",
     the root logger is set to the trace level and other contents are ignored.
